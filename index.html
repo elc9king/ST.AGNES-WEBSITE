@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#0f4c2f">
+    <meta
+        name="description"
+        content="St. Agnes Educational Centre, Ahero — a Catholic school in Kisumu County."
+    >
+
+    <title>St. Agnes Educational Centre — Ahero</title>
+
+      <!-- Load saved theme BEFORE the page renders -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem("st-agnes-theme");
+
+            if (theme === "dark") {
+                document.documentElement.setAttribute(
+                    "data-theme",
+                    "dark"
+                );
+            }
+        })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip to main content (keyboard accessibility) -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container">
+            <a
+                href="https://maps.app.goo.gl/nG6LaiTneLZjVS7x7"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                📍 RWJV+XW Ahero, Kisumu County
+            </a>
+
+            <a href="tel:+254723250929">
+                📞 0723 250 929
+            </a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="St. Agnes Educational Centre home"
+            >
+                <div class="brand-mark" aria-hidden="true">
+                    SA
+                </div>
+
+                <div>
+                    <strong>St. Agnes</strong>
+                    <span>Educational Centre</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav
+                class="main-nav"
+                id="mainNav"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="index.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="academics.html">
+                    Academics
+                </a>
+
+                <a href="life.html">
+                    School Life
+                </a>
+
+                <a href="rules.html">
+                    Rules &amp; Values
+                </a>
+
+                <a href="visit.html">
+                    Visit Us
+                </a>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode"
+                >
+                    <span id="themeIcon" aria-hidden="true">🌙</span>
+                </button>
+
+            </nav>
+
+            <button
+                type="button"
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        Welcome to St. Agnes
+                    </span>
+
+                    <h1>
+                        A place to learn,
+                        <span>grow and belong.</span>
+                    </h1>
+
+                    <p>
+                        St. Agnes Educational Centre is a Catholic school
+                        in Ahero, Kisumu County, Kenya.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="visit.html" class="btn btn-primary">
+                            Book a Visit
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="learnMoreBtn"
+                            aria-expanded="false"
+                            aria-controls="learnMoreMenu"
+                        >
+                            Explore School
+
+                            <span
+                                class="learn-more-arrow"
+                                aria-hidden="true"
+                            >
+                                ↓
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- SCHOOL PHOTO -->
+                <div class="hero-image">
+
+                    <img
+                        src="images/hero.jpg"
+                        alt="School photograph of St. Agnes Educational Centre in Ahero"
+                        onerror="
+                            this.style.display='none';
+                            this.parentElement.classList.add('image-missing');
+                        "
+                    >
+
+                    <div class="hero-placeholder">
+                        <div>
+                            <strong>School Photo</strong>
+                            <small>images/hero.jpg</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- HERO INFORMATION CARD -->
+                <div class="hero-card">
+
+                    <span class="eyebrow">
+                        Explore
+                    </span>
+
+                    <h2>
+                        Discover St. Agnes
+                    </h2>
+
+                    <p>
+                        Explore the school, academics, school life,
+                        values and visiting information.
+                    </p>
+
+                    <!-- LEARN MORE MENU -->
+                    <div
+                        class="learn-more-menu"
+                        id="learnMoreMenu"
+                        aria-hidden="true"
+                    >
+
+                        <p>
+                            Explore St. Agnes Educational Centre
+                        </p>
+
+                        <div class="learn-more-links">
+
+                            <a href="about.html">
+                                About
+                            </a>
+
+                            <a href="academics.html">
+                                Academics
+                            </a>
+
+                            <a href="life.html">
+                                School Life
+                            </a>
+
+                            <a href="rules.html">
+                                Rules &amp; Values
+                            </a>
+
+                            <a href="visit.html">
+                                Visit Us
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK INTRO -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        St. Agnes Educational Centre
+                    </span>
+
+                    <h2>
+                        Everything you need,
+                        in one place.
+                    </h2>
+
+                    <p>
+                        Explore the different parts of our school website
+                        and discover the information available about
+                        St. Agnes Educational Centre.
+                    </p>
+
+                </div>
+
+                <div class="cards-grid">
+
+                    <!-- ABOUT CARD -->
+                    <a
+                        href="about.html"
+                        class="info-card"
+                    >
+                        <div class="card-icon">
+                            01
+                        </div>
+
+                        <h3>
+                            About
+                        </h3>
+
+                        <p>
+                            Learn more about St. Agnes Educational Centre.
+                        </p>
+
+                        <span class="card-label">
+                            EXPLORE →
+                        </span>
+                    </a>
+
+                    <!-- ACADEMICS CARD -->
+                    <a
+                        href="academics.html"
+                        class="info-card"
+                    >
+                        <div class="card-icon">
+                            02
+                        </div>
+
+                        <h3>
+                            Academics
+                        </h3>
+
+                        <p>
+                            Explore the school's academic information.
+                        </p>
+
+                        <span class="card-label">
+                            EXPLORE →
+                        </span>
+                    </a>
+
+                    <!-- SCHOOL LIFE CARD -->
+                    <a
+                        href="life.html"
+                        class="info-card"
+                    >
+                        <div class="card-icon">
+                            03
+                        </div>
+
+                        <h3>
+                            School Life
+                        </h3>
+
+                        <p>
+                            Discover school activities, events and moments.
+                        </p>
+
+                        <span class="card-label">
+                            EXPLORE →
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- VISIT CTA -->
+        <section class="section section-soft">
+
+            <div class="container">
+
+                <div class="feature-panel">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Visit Us
+                        </span>
+
+                        <h2>
+                            Come and see the school.
+                        </h2>
+
+                        <p>
+                            Find our location, contact information
+                            and visiting details.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="visit.html"
+                        class="btn btn-secondary"
+                    >
+                        Plan Your Visit
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div>
+                <strong>
+                    St. Agnes Educational Centre
+                </strong>
+
+                <p>
+                    Ahero, Kisumu County, Kenya
+                </p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="visit.html">Visit Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+
+            <p>
+                © 2026 St. Agnes Educational Centre
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

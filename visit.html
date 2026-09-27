@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visit Us | St. Agnes Educational Centre</title>
+    <meta
+        name="description"
+        content="Location, contact details and visiting information for St. Agnes Educational Centre in Ahero, Kisumu County, Kenya."
+    >
+
+      <!-- Load saved theme BEFORE the page renders -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem("st-agnes-theme");
+
+            if (theme === "dark") {
+                document.documentElement.setAttribute(
+                    "data-theme",
+                    "dark"
+                );
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .visit-hero {
+            padding: 90px 0 70px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(212,165,116,.20), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(15,76,47,.12), transparent 35%),
+                var(--cream);
+        }
+
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-top: 45px;
+        }
+
+        .visit-card {
+            background: rgba(255,255,255,.82);
+            border: 1px solid rgba(15,76,47,.10);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 18px 50px rgba(0,0,0,.06);
+            backdrop-filter: blur(14px);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .visit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,.10);
+        }
+
+        .visit-card h2 {
+            margin: 0 0 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-row:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #edf5ef;
+            color: var(--green);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .contact-row strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .contact-row span,
+        .contact-row a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .map-wrapper {
+            min-height: 100%;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid rgba(15,76,47,.10);
+            box-shadow: 0 18px 50px rgba(0,0,0,.07);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 430px;
+            border: 0;
+        }
+
+        .visit-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .documentation-section {
+            margin-top: 80px;
+        }
+
+        .documentation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .documentation-header h2 {
+            margin: 8px 0;
+        }
+
+        .documentation-header p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .docs-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .doc-creator {
+            background: var(--green);
+            color: white;
+            border-radius: 26px;
+            padding: 30px;
+            box-shadow: 0 25px 60px rgba(15,76,47,.18);
+        }
+
+        .doc-creator h3 {
+            margin-top: 0;
+            font-family: "Fraunces", serif;
+            font-size: 28px;
+            color: #fff;
+        }
+
+        .doc-creator p {
+            color: rgba(255,255,255,.75);
+            line-height: 1.7;
+        }
+
+        .doc-form {
+            display: grid;
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .doc-form label {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,.85);
+        }
+
+        .doc-form input,
+        .doc-form textarea,
+        .doc-form select {
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            border-radius: 12px;
+            padding: 13px 14px;
+            font: inherit;
+            background: rgba(255,255,255,.10);
+            color: white;
+            border: 1px solid rgba(255,255,255,.16);
+        }
+
+        .doc-form input:focus-visible,
+        .doc-form textarea:focus-visible,
+        .doc-form select:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .doc-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .doc-form input::placeholder,
+        .doc-form textarea::placeholder {
+            color: rgba(255,255,255,.70);
+        }
+
+        .doc-form select option {
+            color: #111;
+        }
+
+        .doc-submit {
+            margin-top: 8px;
+            border: 0;
+            border-radius: 12px;
+            padding: 13px 18px;
+            background: var(--gold);
+            color: #1d1d1d;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .2s ease;
+        }
+
+        .doc-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .documents-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .document-card {
+            background: white;
+            border: 1px solid #e9e7df;
+            border-radius: 20px;
+            padding: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .document-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+        }
+
+        .document-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .document-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #f4eee6;
+            color: var(--green);
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+        }
+
+        .document-card h4 {
+            margin: 0 0 5px;
+        }
+
+        .document-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .document-tag {
+            display: inline-block;
+            margin-top: 7px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            color: var(--green);
+        }
+
+        .document-delete {
+            border: 0;
+            background: transparent;
+            color: #6b6b6b;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .document-delete:focus-visible {
+            outline: 3px solid var(--green);
+            outline-offset: 2px;
+            border-radius: 8px;
+        }
+
+        .document-delete:hover {
+            color: #b33;
+        }
+
+        /* Dark mode adjustments for this page */
+        [data-theme="dark"] .visit-hero {
+            background: #0b1711;
+        }
+
+        [data-theme="dark"] .visit-hero h1 {
+            color: #f4f7f4;
+        }
+
+        [data-theme="dark"] .visit-hero p {
+            color: var(--muted);
+        }
+
+        [data-theme="dark"] .visit-card {
+            background: rgba(16, 29, 21, .86);
+            border-color: rgba(255, 255, 255, .10);
+        }
+
+        [data-theme="dark"] .visit-card h2 {
+            color: #f4f7f4;
+        }
+
+        [data-theme="dark"] .contact-row {
+            border-bottom-color: rgba(255, 255, 255, .10);
+        }
+
+        [data-theme="dark"] .contact-icon {
+            background: #16271e;
+            color: var(--gold);
+        }
+
+        [data-theme="dark"] .map-wrapper {
+            border-color: rgba(255, 255, 255, .10);
+        }
+
+        [data-theme="dark"] .documentation-header h2 {
+            color: #f4f7f4;
+        }
+
+        [data-theme="dark"] .document-card {
+            background: var(--surface);
+            border-color: var(--border);
+        }
+
+        [data-theme="dark"] .document-card h4 {
+            color: #f4f7f4;
+        }
+
+        [data-theme="dark"] .document-icon {
+            background: #16271e;
+            color: var(--gold);
+        }
+
+        [data-theme="dark"] .document-tag {
+            color: var(--gold);
+        }
+
+        [data-theme="dark"] .document-delete {
+            color: var(--muted);
+        }
+
+        [data-theme="dark"] .document-delete:focus-visible {
+            outline-color: var(--gold);
+        }
+
+        [data-theme="dark"] .document-delete:hover {
+            color: #e08585;
+        }
+
+        @media (max-width: 850px) {
+
+            .visit-grid,
+            .docs-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .documentation-header {
+                display: block;
+            }
+
+            .map-wrapper iframe {
+                min-height: 350px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .visit-card,
+            .doc-creator {
+                padding: 22px;
+            }
+
+            .document-card {
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="topbar">
+    <div class="container">
+        <span>Catholic school · Ahero, Kisumu County</span>
+        <span>Learning · Character · Community</span>
+    </div>
+</div>
+
+
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="brand">
+            <div class="brand-mark">SA</div>
+
+            <div>
+                <strong>St. Agnes</strong>
+                <span>Educational Centre</span>
+            </div>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="life.html">School Life</a>
+            <a href="rules.html">Rules & Values</a>
+            <a href="visit.html" class="active" aria-current="page">Visit Us</a>
+
+<button
+    type="button"
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Switch to dark mode"
+    title="Switch to dark mode"
+>
+    <span id="themeIcon" aria-hidden="true">🌙</span>
+</button>
+        </nav><button
+    type="button"
+    class="mobile-menu-toggle"
+    id="mobileMenuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="mainNav"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+    </div>
+
+</header>
+
+
+<main id="main-content">
+
+    <section class="visit-hero">
+
+        <div class="container">
+
+            <span class="eyebrow">VISIT ST. AGNES</span>
+
+            <h1>
+                Come and see
+                <span>our school.</span>
+            </h1>
+
+            <p>
+                Find our location, contact the school and prepare
+                for your visit to St. Agnes Educational Centre.
+            </p>
+
+
+            <div class="visit-grid">
+
+                <div class="visit-card">
+
+                    <h2>Get in touch</h2>
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">⌖</div>
+
+                        <div>
+                            <strong>Location</strong>
+                            <span>
+                                RWJV+XW Ahero, Kisumu County, Kenya
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">☎</div>
+
+                        <div>
+                            <strong>Phone</strong>
+
+                            <a href="tel:+254723250929">
+                                0723 250 929
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">◷</div>
+
+                        <div>
+                            <strong>Office Hours</strong>
+
+                            <span>
+                                Monday – Friday<br>
+                                8:00 AM – 4:00 PM
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon" aria-hidden="true">⌂</div>
+
+                        <div>
+                            <strong>Address</strong>
+
+                            <span class="placeholder">
+                                [ADD VERIFIED SCHOOL ADDRESS]
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon" aria-hidden="true">✉</div>
+
+                        <div>
+                            <strong>Email</strong>
+
+                            <span class="placeholder">
+                                [ADD VERIFIED EMAIL]
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="visit-actions">
+
+                        <a
+                            class="btn btn-primary"
+                            href="tel:+254723250929"
+                        >
+                            Call the School
+                        </a>
+
+                        <a
+                            class="btn btn-secondary"
+                            href="https://maps.app.goo.gl/nG6LaiTneLZjVS7x7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Maps
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=St.+Agnes+Educational+Centre,+Ahero&output=embed"
+                        loading="lazy"
+                        title="Map showing St. Agnes Educational Centre"
+                    ></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DOCUMENTATION -->
+
+    <section class="section documentation-section">
+
+        <div class="container">
+
+            <div class="documentation-header">
+
+                <div>
+
+                    <span class="eyebrow">SCHOOL DOCUMENTATION</span>
+
+                    <h2>Documentation centre</h2>
+
+                    <p>
+                        Keep useful school documents and notes organised
+                        in one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="docs-layout">
+
+                <!-- CREATOR -->
+
+                <div class="doc-creator">
+
+                    <h3>Create documentation</h3>
+
+                    <p>
+                        Add a document entry below. These entries are stored
+                        locally in this browser for now.
+                    </p>
+
+
+                    <form class="doc-form" id="documentForm">
+
+                        <div>
+                            <label for="docTitle">Document title</label>
+
+                            <input
+                                id="docTitle"
+                                type="text"
+                                placeholder="e.g. School Rules"
+                                required
+                            >
+                        </div>
+
+
+                        <div>
+                            <label for="docType">Document type</label>
+
+                            <select id="docType">
+
+                                <option value="Information">
+                                    Information
+                                </option>
+
+                                <option value="Rules">
+                                    Rules
+                                </option>
+
+                                <option value="Academics">
+                                    Academics
+                                </option>
+
+                                <option value="Admissions">
+                                    Admissions
+                                </option>
+
+                                <option value="Events">
+                                    Events
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="docDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="docDescription"
+                                placeholder="Briefly describe this document..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="doc-submit"
+                            type="submit"
+                        >
+                            + Create Document
+                        </button>
+
+                    </form>
+
+                    <p class="form-note">
+                        Entries you create are saved only in this browser on
+                        this device. They are not sent to the school, and no
+                        personal information is requested.
+                        See our <a href="privacy.html">Privacy Policy</a>.
+                    </p>
+
+                </div>
+
+
+                <!-- DOCUMENTS -->
+
+                <div>
+
+                    <div
+                        class="documents-list"
+                        id="documentsList"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div>
+            <strong>St. Agnes Educational Centre</strong>
+            <p>Ahero, Kisumu County, Kenya</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="visit.html">Visit Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </nav>
+
+        <p>© 2026 St. Agnes Educational Centre</p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+const form = document.getElementById("documentForm");
+const list = document.getElementById("documentsList");
+
+const defaultDocuments = [
+    {
+        title: "School Information",
+        type: "Information",
+        description: "General information about St. Agnes Educational Centre."
+    },
+    {
+        title: "Visit Information",
+        type: "Information",
+        description: "Location, contact information and office hours."
+    }
+];
+
+
+function getDocuments() {
+
+    const saved = localStorage.getItem("stAgnesDocuments");
+
+    if (saved) {
+        return JSON.parse(saved);
+    }
+
+    localStorage.setItem(
+        "stAgnesDocuments",
+        JSON.stringify(defaultDocuments)
+    );
+
+    return defaultDocuments;
+}
+
+
+function saveDocuments(documents) {
+
+    localStorage.setItem(
+        "stAgnesDocuments",
+        JSON.stringify(documents)
+    );
+
+}
+
+
+function renderDocuments() {
+
+    const documents = getDocuments();
+
+    list.innerHTML = "";
+
+    documents.forEach((entry, index) => {
+
+        const card = document.createElement("article");
+
+        card.className = "document-card";
+
+        card.innerHTML = `
+            <div class="document-meta">
+
+                <div class="document-icon">
+                    DOC
+                </div>
+
+                <div>
+
+                    <h4>${escapeHTML(entry.title)}</h4>
+
+                    <p>
+                        ${escapeHTML(entry.description)}
+                    </p>
+
+                    <span class="document-tag">
+                        ${escapeHTML(entry.type)}
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                class="document-delete"
+                onclick="deleteDocument(${index})"
+                title="Delete document"
+                aria-label="Delete document: ${escapeHTML(entry.title)}"
+            >
+                ×
+            </button>
+        `;
+
+        list.appendChild(card);
+
+    });
+
+}
+
+
+function deleteDocument(index) {
+
+    const documents = getDocuments();
+
+    documents.splice(index, 1);
+
+    saveDocuments(documents);
+
+    renderDocuments();
+
+}
+
+
+function escapeHTML(value) {
+
+    return value
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const title =
+        document.getElementById("docTitle").value.trim();
+
+    const type =
+        document.getElementById("docType").value;
+
+    const description =
+        document.getElementById("docDescription").value.trim();
+
+
+    if (!title || !description) {
+        return;
+    }
+
+
+    const documents = getDocuments();
+
+
+    documents.push({
+        title,
+        type,
+        description
+    });
+
+
+    saveDocuments(documents);
+
+    form.reset();
+
+    renderDocuments();
+
+});
+
+
+renderDocuments();
+
+</script>
+
+</body>
+</html>
